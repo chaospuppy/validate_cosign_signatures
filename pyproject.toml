@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "validate_cosign_signatures"
+version = "0.1.0"
+description = ""
+authors = ["Tim Seagren <seagren.tim@solute.us>"]
+
+packages = [
+  { include = "./validate.py" },
+  { include = "modules"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+ibmodules = {git = "https://repo1.dso.mil/ironbank-tools/ironbank-pipeline.git", rev = "str-image-cosign-verify"}
+
+[tool.poetry.dev-dependencies]
+neovim = "^0.3.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
